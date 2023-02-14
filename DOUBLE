@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+double volume;
+// calculate vloume call by value
+double calculateVolume1(double radius, double height){
+      cout<<radius<<endl;
+    volume = 3.1415 * radius * radius * height;
+    
+    return volume;
+    
+}
+// calculate vloume call by refrence
+double calculateVolume2(double &radius, double &height){
+ cout<<radius<<endl;
+    volume = 3.1415 * radius * radius * height;
+     
+    return volume;
+}
+// calculate vloume call by caonstent refrence
+double calculateVolume3(const double &radius, const double &height){
+volume = 3.1415 * radius * radius * height;
+    
+    return volume;
+    
+}
+
+int  main(){
+    double  a =12, b=3;
+   cout<<"The volume by Value "<<calculateVolume1( a,  b)<< endl;
+    cout<<"The volume by Value "<<calculateVolume2( a,  b)<<endl;
+    cout<<"The volume by Value "<<calculateVolume3( a,  b)<<endl;
+}
